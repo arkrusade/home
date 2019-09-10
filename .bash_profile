@@ -1,0 +1,6 @@
+cyg_home="/mnt/c/cygwin64/home/justinjlee99"
+alias home="cd ~"
+alias chome="cd $cyg_home"
+alias curr="cd $cyg_home/current/485/1"
+alias sbash="source ~/.bash_profile"
+alias vbash="vim ~/.bash_profile"
