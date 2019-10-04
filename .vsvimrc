@@ -1,0 +1,22 @@
+"  mark line
+colorscheme desert
+set number
+syntax on
+set showcmd
+
+noremap <c-j> J
+noremap J 5j
+noremap K 5k
+noremap Y y$
+nnoremap <c-l> yyp
+nnoremap <c-L> yyP
+
+" insert mode de-tab
+inoremap <S-Tab> <C-d>
+" command mode de-tab
+" nnoremap <C-S-Tab> <<
+
+" Un-indent in Visual mode with Shift\Tab
+vnoremap <Tab> >gv
+vnoremap <S-Tab> <gv
+
