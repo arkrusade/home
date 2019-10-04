@@ -1,0 +1,40 @@
+echo $?                     # prints the last command exit status
+
+curl ifconfig.me 			# what is my IP address
+curl ipinfo.io/ip			# what is my IP address
+
+find . -name 'mystring'     # Finds file by name nested
+
+python3 -m venv env         # Create python virtual environment in env folder
+echo $VIRTUAL_ENV           # Checks the virtual environment directory and that it is active
+pip install -e .            # Installs everything in virtual environment for python dependencies
+
+## Vim commands
+:mks[ession][!] [file]      # Write a Vim script that restores the current editing session.
+vim -S Session.vim          # Restores all tabs
+                            # When [!] is included an existing file is overwritten.
+                            # When [file] is omitted "Session.vim" is used.
+
+## Pymode vim commands
+<c-n>                       # auto-complete
+<leader>r                   # run python code
+
+
+## tmux commands
+?                           # list shortcuts help
+c                           # new window
+,                           # name window
+w                           # list windows
+f                           # find window
+&                           # kill window
+.                           # move window - prompted for a new number
+:movew<CR>                  # move window to the next unused number
+
+## tmux panes (splits)
+%                           # horizontal split
+"                           # vertical split
+o                           # swap active panes
+<c-o>                       # cycle - swap panes placement
+q                           # show pane numbers
+x                           # kill pane
+<space>                     # toggle between layouts
