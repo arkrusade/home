@@ -1,0 +1,6 @@
+## Tmux
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+## Vim 
+git clone --recurse-submodules https://github.com/python-mode/python-mode.git ~/.vim/pack/python-mode/start/python-mode
+
+git clone https://github.com/flazz/vim-colorschemes ~/.vim/

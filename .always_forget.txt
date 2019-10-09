@@ -1,3 +1,12 @@
+# mark line
+
+## Bash script header starter code
+set -Eeuo pipefail          # exits if command fails
+set -x                      # idk
+
+## Scripting in bash
+chmod +x test.sh            # sets the script to be executable
+
 echo $?                     # prints the last command exit status
 
 curl ifconfig.me 			# what is my IP address

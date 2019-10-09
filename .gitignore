@@ -1,0 +1,9 @@
+*
+!.gitignore
+!.always_forget
+!.bash_profile
+!.install_everything
+!.tmux_conf
+!.vimrc
+!.vsvimrc
+

@@ -1,0 +1,7 @@
+[user]
+	email = justinjlee99@gmail.com
+	name = Justin Lee
+[core]
+	editor = vim
+[push]
+	default = simple

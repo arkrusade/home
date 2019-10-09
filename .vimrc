@@ -1,7 +1,7 @@
 "  mark line
 set encoding=utf-8
 
-colorscheme desert
+colorscheme slate 
 set number
 syntax on
 set showcmd
