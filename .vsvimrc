@@ -1,7 +1,5 @@
 "  mark line
-colorscheme desert
 set number
-syntax on
 set showcmd
 
 noremap <c-j> J

@@ -1,7 +1,8 @@
 "  mark line
 set encoding=utf-8
 
-colorscheme slate 
+colorscheme dracula 
+" colorscheme inkpot 
 set number
 syntax on
 set showcmd
@@ -22,7 +23,12 @@ inoremap <S-Tab> <C-d>
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
 
+filetype plugin on
 filetype plugin indent on
+
+" shows if line extends or precedes visible screen
+" set list
+set lcs=tab:\ \ ,precedes:>,extends:<
 " show existing tab with 4 spaces width
 set tabstop=4
 " when indenting with '>', use 4 spaces width
@@ -31,7 +37,6 @@ set shiftwidth=4
 set expandtab
 
 " python-mode
-let g:pymode = 1
 let g:pymode_python = 'python3'
 let g:pymode_doc_bind = '<c-k>'
 let g:pymode_run_bind = '<leader>r'
