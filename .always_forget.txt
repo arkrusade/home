@@ -1,4 +1,16 @@
-# mark line
+# mark line 
+
+sudo tcpdump -S "tcp[tcpflags] & (tcp-syn|tcp-ack|tcp-fin) != 0"        # watch 3-way handshake
+
+## Bash commands
+sudo !!                     # redo last command as root/sudo
+<c-x-e>                     # open editor to run command
+ ls -l                      # don't add command to history (leading space)
+history                     # lists last few commands from history
+fc                          # fix a command in editor
+cat file | tee -a log | cat > /dev/null             # intercept ouput and log to file, then continue piping
+disown -a                   # prevents terminal exit from terminating child processes
+mkdir -p folder/{sub1,sub2}/{sub1,sub2,sub3}        # makes subfolders with all permutations
 
 ## Bash script header starter code
 set -Eeuo pipefail          # exits if command fails

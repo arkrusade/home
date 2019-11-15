@@ -1,7 +1,7 @@
 cyg_home="/mnt/c/cygwin64/home/justinjlee99"
 alias home="cd ~"
 alias cyghome="cd $cyg_home"
-alias curr="cd $cyg_home/current/485/3"
+alias curr="cd $cyg_home/current/485/4"
 alias sbash="source ~/.bash_profile"
 alias vbash="vim ~/.bash_profile"
 alias senv="source env/bin/activate"

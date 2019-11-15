@@ -14,6 +14,11 @@ noremap Y y$
 nnoremap <c-l> yyp
 nnoremap <c-L> yyP
 
+" copy (write) highlighted text to .vimbuffer
+vmap <C-c> y:new ~/.vimbuffer<CR>VGp:x<CR> \| :!cat ~/.vimbuffer \| clip.exe <CR><CR>
+" paste from buffer
+map <C-v> :r ~/.vimbuffer<CR>
+
 " insert mode de-tab
 inoremap <S-Tab> <C-d>
 " command mode de-tab
