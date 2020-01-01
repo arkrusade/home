@@ -59,3 +59,4 @@ o                           # swap active panes
 q                           # show pane numbers
 x                           # kill pane
 <space>                     # toggle between layouts
+git status --porcelain | grep '^??' | cut -c4- >> .gitignore     # add untraced files to gitignore

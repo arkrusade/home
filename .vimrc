@@ -6,18 +6,33 @@ colorscheme dracula
 set number
 syntax on
 set showcmd
+" shows if line extends or precedes visible screen
+set list
+set lcs=tab:\ \ ,precedes:>,extends:<
+
+set nocompatible
+set path+=**
+filetype plugin on
+
+filetype plugin indent on
+" show existing tab with 4 spaces width
+set tabstop=4
+" when indenting with '>', use 4 spaces width
+set shiftwidth=4
+" ON pressing tab, insert 4 spaces
+set expandtab
 
 noremap <c-j> J
 noremap J 5j
 noremap K 5k
 noremap Y y$
 nnoremap <c-l> yyp
-nnoremap <c-L> yyP
 
 " copy (write) highlighted text to .vimbuffer
-vmap <C-c> y:new ~/.vimbuffer<CR>VGp:x<CR> \| :!cat ~/.vimbuffer \| clip.exe <CR><CR>
+vnoremap <C-c> y:new ~/.vimbuffer<CR>VGp:x<CR> \| :!cat ~/.vimbuffer \| clip.exe <CR><CR>
 " paste from buffer
-map <C-v> :r ~/.vimbuffer<CR>
+vnoremap <C-v> :r ~/.vimbuffer<CR>
+nnoremap <C-v> <C-v>
 
 " insert mode de-tab
 inoremap <S-Tab> <C-d>
@@ -28,20 +43,8 @@ inoremap <S-Tab> <C-d>
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
 
-filetype plugin on
-filetype plugin indent on
-
-" shows if line extends or precedes visible screen
-" set list
-set lcs=tab:\ \ ,precedes:>,extends:<
-" show existing tab with 4 spaces width
-set tabstop=4
-" when indenting with '>', use 4 spaces width
-set shiftwidth=4
-" ON pressing tab, insert 4 spaces
-set expandtab
-
 " python-mode
+" let g:pymode = 1
 let g:pymode_python = 'python3'
 let g:pymode_doc_bind = '<c-k>'
 let g:pymode_run_bind = '<leader>r'
