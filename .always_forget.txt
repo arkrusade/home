@@ -21,8 +21,8 @@ chmod +x test.sh            # sets the script to be executable
 
 echo $?                     # prints the last command exit status
 
-curl ifconfig.me 			# what is my IP address
-curl ipinfo.io/ip			# what is my IP address
+curl ifconfig.me            # what is my IP address
+curl ipinfo.io/ip           # what is my IP address
 
 find . -name 'mystring'     # Finds file by name nested
 
@@ -41,7 +41,7 @@ vim -S Session.vim          # Restores all tabs
 <leader>r                   # run python code
 
 
-## tmux commands
+## Tmux commands
 ?                           # list shortcuts help
 c                           # new window
 ,                           # name window
@@ -51,7 +51,7 @@ f                           # find window
 .                           # move window - prompted for a new number
 :movew<CR>                  # move window to the next unused number
 
-## tmux panes (splits)
+## Tmux panes (splits)
 %                           # horizontal split
 "                           # vertical split
 o                           # swap active panes
@@ -59,4 +59,6 @@ o                           # swap active panes
 q                           # show pane numbers
 x                           # kill pane
 <space>                     # toggle between layouts
+
+
 git status --porcelain | grep '^??' | cut -c4- >> .gitignore     # add untraced files to gitignore
