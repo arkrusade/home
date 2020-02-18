@@ -39,9 +39,10 @@ vim -S Session.vim          # Restores all tabs
 ## Pymode vim commands
 <c-n>                       # auto-complete
 <leader>r                   # run python code
+<leader>b                   # insert breakpoint
 
 
-## Tmux commands
+## Tmux commands - tmux
 ?                           # list shortcuts help
 c                           # new window
 ,                           # name window
@@ -58,7 +59,9 @@ o                           # swap active panes
 <c-o>                       # cycle - swap panes placement
 q                           # show pane numbers
 x                           # kill pane
+z                           # maximize pane
 <space>                     # toggle between layouts
 
 
-git status --porcelain | grep '^??' | cut -c4- >> .gitignore     # add untraced files to gitignore
+git status --porcelain | grep '^??' | cut -c4- >> .gitignore     # add untracked files to gitignore
+curl -u '$username' https://api.github.com/user/repos -d "{\"name\":\"$repo_name\"}"        # create Github repo from command line

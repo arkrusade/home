@@ -2,7 +2,9 @@
 !.gitignore
 !.always_forget
 !.bash_profile
+!.bashrc
 !.install_everything
+!.profile
 !.tmux_conf
 !.vimrc
 !.vsvimrc
