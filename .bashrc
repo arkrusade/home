@@ -1,9 +1,9 @@
 # PATH=$PATH:~/bin
 export PATH
 
-cyg_home="/mnt/c/cygwin64/home/justinjlee99"
+cyg_home="/mnt/c/cygwin64/home/Justin\ Lee"
 alias cyghome="cd $cyg_home"
-alias curr="cd $cyg_home/current/442/2"
+alias curr="cd $cyg_home/current/442/4"
 
 alias sbash="source ~/.bashrc"
 alias vbash="vim ~/.bashrc"

@@ -1,3 +1,7 @@
+execute pathogen#infect()
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
 "  mark line
 set encoding=utf-8
 
