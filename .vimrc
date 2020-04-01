@@ -1,11 +1,8 @@
-execute pathogen#infect()
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
-
 "  mark line
 set encoding=utf-8
 
-colorscheme dracula 
+colorscheme desert
+" colorscheme dracula 
 " colorscheme inkpot 
 set number
 syntax on
@@ -35,8 +32,9 @@ nnoremap <c-l> yyp
 " copy (write) highlighted text to .vimbuffer
 vnoremap <C-c> y:new ~/.vimbuffer<CR>VGp:x<CR> \| :!cat ~/.vimbuffer \| clip.exe <CR><CR>
 " paste from buffer
-vnoremap <C-v> :r ~/.vimbuffer<CR>
-nnoremap <C-v> <C-v>
+noremap <C-v> <C-v>
+vnoremap <C-v> <C-v>
+nnoremap <C-v> :r ~/.vimbuffer<CR>
 
 " insert mode de-tab
 inoremap <S-Tab> <C-d>
