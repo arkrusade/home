@@ -32,9 +32,10 @@ nnoremap <c-l> yyp
 " copy (write) highlighted text to .vimbuffer
 vnoremap <C-c> y:new ~/.vimbuffer<CR>VGp:x<CR> \| :!cat ~/.vimbuffer \| clip.exe <CR><CR>
 " paste from buffer
-noremap <C-v> <C-v>
-vnoremap <C-v> <C-v>
-nnoremap <C-v> :r ~/.vimbuffer<CR>
+" noremap <C-v> <C-v>
+" vnoremap <C-v> <C-v>
+" nnoremap <C-v> <C-v>
+" noremap <C-v> :r ~/.vimbuffer<CR>
 
 " insert mode de-tab
 inoremap <S-Tab> <C-d>

@@ -1,12 +1,20 @@
 # PATH=$PATH:~/bin
 export PATH
-
-cyg_home="/mnt/c/cygwin64/home/Justin\ Lee"
-alias cyghome="cd $cyg_home"
-alias curr="cd $cyg_home/current/442/4"
+export EDITOR='vim'
 
 alias sbash="source ~/.bashrc"
 alias vbash="vim ~/.bashrc"
+
+cyg_home="/mnt/c/cygwin64/home/Justin\ Lee"
+function alhere() 
+{
+    num=$("grep -n 'directory aliases' ~/.bashrc | cut -f1 -d: | sed -n '2 p'")
+    let num = num + 1
+}
+# directory aliases
+alias cyghome="cd $cyg_home"
+alias curr="cd $cyg_home/current/442/4"
+
 
 alias caen="~/./caen"
 # alias git="hub"
