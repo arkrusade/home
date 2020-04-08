@@ -1,6 +1,17 @@
+set +x
 ## Tmux
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-## Vim 
-git clone --recurse-submodules https://github.com/python-mode/python-mode.git ~/.vim/pack/python-mode/start/python-mode
 
-git clone https://github.com/flazz/vim-colorschemes ~/.vim/
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+## Vim 
+VIM_PACK_DIR="$HOME/.vim/pack/justinjl"
+mkdir $VIM_PACK_DIR -p
+cd $VIM_PACK_DIR 
+mkdir opt start -p
+
+git clone --recurse-submodules https://github.com/python-mode/python-mode.git $VIM_PACK_DIR/start/python-mode
+
+git clone --recurse-submodules https://github.com/flazz/vim-colorschemes $VIM_PACK_DIR/start/flazz-colors
+
+
+# TODO: make ssh key

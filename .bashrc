@@ -6,14 +6,27 @@ alias sbash="source ~/.bashrc"
 alias vbash="vim ~/.bashrc"
 
 cyg_home="/mnt/c/cygwin64/home/Justin\ Lee"
-function alhere() 
+function cdhere() 
 {
-    num=$("grep -n 'directory aliases' ~/.bashrc | cut -f1 -d: | sed -n '2 p'")
-    let num = num + 1
+    if [ $# -eq 0 ]; then
+        echo "Need argument"
+        return
+    fi
+    num=$(grep -n 'directory aliases' ~/.bashrc | cut -f1 -d: | sed -n '2 p')
+    let num=num+1
+    line="alias ${1}='cd $(printf '%q\n' "$(pwd)")'" 
+    # echo $line
+    sedthing="${num}i $(printf '%q\n' "$line")"
+    # echo $sedthing
+    sed -i "$sedthing" ~/.bashrc
+    # sed "${num}q;d" ~/.bashrc
+    sbash
 }
-# directory aliases
+# TODO: change to .bash_aliases file
+# and allow to change existing aliases, instead of just making new ones
+# line for directory aliases
 alias cyghome="cd $cyg_home"
-alias curr="cd $cyg_home/current/442/4"
+alias curr="cd $cyg_home/current/"
 
 
 alias caen="~/./caen"

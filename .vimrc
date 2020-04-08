@@ -47,7 +47,7 @@ vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
 
 " python-mode
-" let g:pymode = 1
+let g:pymode = 1
 let g:pymode_python = 'python3'
 let g:pymode_doc_bind = '<c-k>'
 let g:pymode_run_bind = '<leader>r'
