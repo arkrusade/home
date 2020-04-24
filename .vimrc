@@ -1,8 +1,8 @@
 "  mark line
 set encoding=utf-8
 
-colorscheme desert
-" colorscheme dracula 
+" colorscheme desert
+colorscheme dracula 
 " colorscheme inkpot 
 set number
 syntax on

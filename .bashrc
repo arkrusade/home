@@ -5,7 +5,7 @@ export EDITOR='vim'
 alias sbash="source ~/.bashrc"
 alias vbash="vim ~/.bashrc"
 
-cyg_home="/mnt/c/cygwin64/home/Justin\ Lee"
+CYG_HOME="/mnt/c/cygwin64/home/Justin\ Lee"
 function cdhere() 
 {
     if [ $# -eq 0 ]; then
@@ -25,8 +25,10 @@ function cdhere()
 # TODO: change to .bash_aliases file
 # and allow to change existing aliases, instead of just making new ones
 # line for directory aliases
-alias cyghome="cd $cyg_home"
-alias curr="cd $cyg_home/current/"
+alias final='cd /mnt/e/442'
+alias 4='cd /mnt/c/cygwin64/home/Justin\ Lee/current/442'
+alias cyghome="cd $CYG_HOME"
+alias curr="cd $CYG_HOME/current/"
 
 
 alias caen="~/./caen"
@@ -39,6 +41,8 @@ alias senv="source env/bin/activate"
 alias denv="deactivate"
 
 TERM=xterm-256color
+# allows Ctrl-S to do fowards search instead of freezing input: https://github.com/mintty/wsltty/issues/155
+stty -ixon 
 
 function swap()         
 {
