@@ -62,3 +62,6 @@ let g:pymode_rope_extract_variable_bind = '<leader>pl'
 let g:pymode_rope_use_function_bind = '<leader>pu'
 let g:pymode_rope_move_bind = '<leader>pv'
 let g:pymode_rope_change_signature_bind = '<leader>ps'
+
+" ignore line too long
+" let g:pymode_lint_ignore = "E501,W"

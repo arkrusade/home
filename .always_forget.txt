@@ -30,8 +30,10 @@ python3 -m venv env         # Create python virtual environment in env folder
 echo $VIRTUAL_ENV           # Checks the virtual environment directory and that it is active
 pip install -e .            # Installs everything in virtual environment for python dependencies
 
+python -m pdb -c continue main.py               # starts debugger after crash/error
+
 vim +500                    # starts vim at line 500
-vim --cmd 'before vimrc' -c 'after vimrc'            # opens vim, then runs commands
+vim --cmd 'before vimrc' -c 'after vimrc'           # opens vim, then runs commands
 
 
 ## Vim commands
@@ -53,6 +55,7 @@ f                           # find window
 &                           # kill window
 .                           # move window - prompted for a new number
 :movew<CR>                  # move window to the next unused number
+:join-pane -t <int>         # joins window as a pane in window of index <int>
 
 ## Tmux panes (splits)
 %                           # horizontal split
@@ -63,6 +66,7 @@ q                           # show pane numbers
 x                           # kill pane
 z                           # maximize pane
 <space>                     # toggle between layouts
+!                           # moves current pane to new window
 
 
 git status --porcelain | grep '^??' | cut -c4- >> .gitignore     # add untracked files to gitignore
