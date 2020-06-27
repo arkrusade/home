@@ -6,12 +6,12 @@ colorscheme dracula
 " colorscheme inkpot 
 set number
 syntax on
+set nocompatible
 set showcmd
 " shows if line extends or precedes visible screen
 set list
 set lcs=tab:\ \ ,precedes:>,extends:<
 
-set nocompatible
 set path+=**
 filetype plugin on
 

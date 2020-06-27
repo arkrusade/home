@@ -3,6 +3,8 @@ export EDITOR='vim'
 alias sbash="source ~/.bashrc"
 alias vbash="vim ~/.bashrc"
 
+set -o vi
+
 CYG_HOME="/mnt/c/cygwin64/home/Justin\ Lee"
 function mkalias() 
 {

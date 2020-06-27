@@ -1,0 +1,57 @@
+general
+    ssh add before git push
+    move to zsh
+    figure out good way to separate environments
+        just git branches is probably not good enough
+        the 'master' should have universal stuff
+        others should have specific aliases
+            config file that specifies 'name' for different envs?
+            then imports a different file based on that name
+
+bash
+    get aliases from oh my zsh
+    make sure profile/rc are split correctly
+        nothing in profile except getting exports and alias files
+        and maybe files for env, functions
+
+
+figure out best universal editor
+
+vim
+    camelCase and snake_case (small w) words
+    surround highlighted with brackets/paren/quotes
+    use previous indent level for new indent (o/O), maybe not for O
+    change order of parameters
+        goes to comma
+        last comma in line?
+            change from next comma until the comma afterwards?
+        a, b -> b, a 
+        a, b, c -> a, c, b
+a, b, c
+(a, b, c)
+b, , c
+
+f,
+b
+"xdW
+W
+P
+
+f,"xdBW"zdB"xPB"zP
+$F,"xdBW"zdiw"xP;"zP
+
+
+    see folding near numbers
+    persistent marks and folding
+    enable certain key combos (<c-cr> vs j, <c-i> vs <tab>)
+        then, add
+            <s-cr> and <s-c-cr> to break line up/down
+            <c-/> for commenting
+    split a macro line into separate operations
+
+
+vscode
+    path to vscode_vimrc
+    universal settings.json
+    list of extensions
+        and their settings.json?
