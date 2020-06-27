@@ -49,3 +49,8 @@ fi
 if [ -f ~/.bash_aliases ]; then
     source ~/.bash_aliases
 fi
+
+# Add bash functions
+if [ -f ~/.bash_aliases ]; then
+    source ~/.bash_functions
+fi

@@ -1,4 +1,5 @@
 general
+    figure out best place for home git
     ssh add before git push
     move to zsh
     figure out good way to separate environments
