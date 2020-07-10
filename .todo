@@ -5,7 +5,7 @@ general
     figure out good way to separate environments
         just git branches is probably not good enough
         the 'master' should have universal stuff
-        others should have specific aliases
+        env specific aliases
             config file that specifies 'name' for different envs?
             then imports a different file based on that name
 
@@ -16,12 +16,45 @@ bash
         and maybe files for env, functions
 
 
-figure out best universal editor
+figure out best editor
+    universal
+    c/c++
+    html/xml
+    python
+    javascript
+    bash
+    txt
+    word?
+    tex?
+    markdown
+        also learn markdown
 
 vim
-    camelCase and snake_case (small w) words
+    move to next method
+    camelCase and snake_case (small w) words 
+        leader w
+        leader W
     surround highlighted with brackets/paren/quotes
+        cib like ci"
+            finds next (only if not in)?
     use previous indent level for new indent (o/O), maybe not for O
+        backspace deleting 4 spaces?
+    joining
+        g<c-j> vs gJ
+        
+
+    see folding near numbers
+    persistent marks and folding
+    enable certain key combos 
+        (<c-cr> vs j, <c-i> vs <tab>)
+    insert line break
+        nah, just use i<cr>
+        <s-cr> and <s-c-cr> to break line up/down
+    commenting
+        language dependant 
+        gc or <c-/> 
+
+    split a macro line into separate operations
     change order of parameters
         goes to comma
         last comma in line?
@@ -42,13 +75,6 @@ f,"xdBW"zdB"xPB"zP
 $F,"xdBW"zdiw"xP;"zP
 
 
-    see folding near numbers
-    persistent marks and folding
-    enable certain key combos (<c-cr> vs j, <c-i> vs <tab>)
-        then, add
-            <s-cr> and <s-c-cr> to break line up/down
-            <c-/> for commenting
-    split a macro line into separate operations
 
 
 vscode
