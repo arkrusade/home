@@ -1,5 +1,7 @@
 # mark line 
 
+#!/bin/bash                 # example bash shebang
+
 sudo tcpdump -S "tcp[tcpflags] & (tcp-syn|tcp-ack|tcp-fin) != 0"        # watch 3-way handshake
 
 ## Bash commands

@@ -1,3 +1,5 @@
+#!/bin/bash
+
 set +x
 ## Tmux
 
@@ -14,4 +16,4 @@ git clone --recurse-submodules https://github.com/python-mode/python-mode.git $V
 git clone --recurse-submodules https://github.com/flazz/vim-colorschemes $VIM_PACK_DIR/start/flazz-colors
 
 
-# TODO: make ssh key
+# TODO: generate a new ssh key?
