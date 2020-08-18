@@ -1,10 +1,14 @@
+#!/
 # mark line 
 
 #!/bin/bash                 # example bash shebang
 
 sudo tcpdump -S "tcp[tcpflags] & (tcp-syn|tcp-ack|tcp-fin) != 0"        # watch 3-way handshake
 
-## Bash commands
+    ##############################
+    ##      Bash commands       ##
+    ##############################
+
 sudo !!                     # redo last command as root/sudo
 <c-x-e>                     # open editor to run command
  ls -l                      # don't add command to history (leading space)
@@ -14,7 +18,7 @@ cat file | tee -a log | cat > /dev/null             # intercept ouput and log to
 disown -a                   # prevents terminal exit from terminating child processes
 mkdir -p folder/{sub1,sub2}/{sub1,sub2,sub3}        # makes subfolders with all permutations
 
-## Bash script header starter code
+    ######## Bash script header starter code ##
 set -Eeuo pipefail          # exits if command fails
 set -x                      # idk
 
@@ -23,10 +27,15 @@ chmod +x test.sh            # sets the script to be executable
 
 echo $?                     # prints the last command exit status
 
+    ######## Important shell commands ##
+eval $(ssh-agent -s)        # tell if ssh-agent is running
+
 curl ifconfig.me            # what is my IP address
 curl ipinfo.io/ip           # what is my IP address
 
 find . -name 'mystring'     # Finds file by name nested
+
+    ######## Python related commands
 
 python3 -m venv env         # Create python virtual environment in env folder
 echo $VIRTUAL_ENV           # Checks the virtual environment directory and that it is active
@@ -38,17 +47,17 @@ vim +500                    # starts vim at line 500
 vim --cmd 'before vimrc' -c 'after vimrc'           # opens vim, then runs commands
 
 
-## Vim commands
+    ######## Vim commands
 :mks                        # Write a Vim script that restores the current editing session.
 vim -S Session.vim          # Restores all tabs
 
-## Pymode vim commands
+    ######## Pymode vim commands
 <c-n>                       # auto-complete
 <leader>r                   # run python code
 <leader>b                   # insert breakpoint
 
 
-## Tmux commands - tmux
+    ######## Tmux commands - tmux
 ?                           # list shortcuts help
 c                           # new window
 ,                           # name window
@@ -59,7 +68,7 @@ f                           # find window
 :movew<CR>                  # move window to the next unused number
 :join-pane -t <int>         # joins window as a pane in window of index <int>
 
-## Tmux panes (splits)
+    ######## Tmux panes (splits)
 %                           # horizontal split
 "                           # vertical split
 o                           # swap active panes
