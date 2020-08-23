@@ -1,20 +1,31 @@
 general
-    figure out best place for home git
-    ssh add before git push
     move to zsh
-    figure out good way to separate environments
-        just git branches is probably not good enough
-        the 'master' should have universal stuff
-        env specific aliases
-            config file that specifies 'name' for different envs?
-            then imports a different file based on that name
+    learn md
+    figure out LS_COLORS
+    add pathogen
+        and other tpope
+        test install everything with tpope
+    work on readme
+        make readme link to files
+        file name separation, and file descriptions should be smaller
 
 bash
+    ssh add before git push
     get aliases from oh my zsh
+
+home
+    best place for home git
     make sure profile/rc are split correctly
         nothing in profile except getting exports and alias files
         and maybe files for env, functions
 
+    separate environments
+        the 'master' should have universal stuff
+        env specific aliases
+            config file that specifies 'name' for different envs?
+            then on runtime imports a different file based on that name
+
+        (also vim env thingy, dracula stuff)
 
 figure out best editor
     universal
@@ -37,8 +48,9 @@ vim
     surround highlighted with brackets/paren/quotes
         cib like ci"
             finds next (only if not in)?
+        ## use tpope/surround
     use previous indent level for new indent (o/O), maybe not for O
-        backspace deleting 4 spaces?
+    insert mode backspace deleting 4 spaces?
     joining
         g<c-j> vs gJ
         
@@ -48,11 +60,12 @@ vim
     enable certain key combos 
         (<c-cr> vs j, <c-i> vs <tab>)
     insert line break
-        nah, just use i<cr>
         <s-cr> and <s-c-cr> to break line up/down
+        nah, just use i<cr>
     commenting
         language dependant 
         gc or <c-/> 
+        ## tpope/commentary
 
     split a macro line into separate operations
     change order of parameters

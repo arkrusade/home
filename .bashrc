@@ -1,6 +1,9 @@
 export EDITOR='vim'
-set -o vi
+# set -o vi
 TERM=xterm-256color
+
+. "/home/justinjl/.local/share/lscolors.sh"
+export LS_COLORS
 
 # allows Ctrl-S to do fowards search instead of freezing input: https://github.com/mintty/wsltty/issues/155
 stty -ixon 

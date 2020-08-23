@@ -2,8 +2,9 @@
 set encoding=utf-8
 
 " colorscheme desert
-colorscheme dracula 
-" colorscheme inkpot 
+" packadd! dracula
+" colorscheme dracula 
+colorscheme inkpot 
 set number
 syntax on
 set nocompatible
