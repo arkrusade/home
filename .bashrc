@@ -17,9 +17,6 @@ if [ -z "$SSH_AGENT_PID" -o -z "`ps -a|egrep \"^[ ]+$SSH_AGENT_PID\"`" ]; then
     . ${HOME}/.ssh-agent > /dev/null
 fi
 
-# aliased to shad
-# ssh-add ~/.ssh/id_rsa
-
 # Add bash aliases.
 if [ -f ~/.bash_aliases ]; then
     source ~/.bash_aliases

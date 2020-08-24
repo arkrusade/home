@@ -6,7 +6,7 @@ function mkalias()
         echo "Need argument"
         return
     fi
-    num=$(grep -n 'directory aliases' ~/.bash_aliases | cut -f1 -d:)
+    num=$(grep -n '# line for directory aliases' ~/.bash_aliases | cut -f1 -d:)
     let num=num+1
     line="alias ${1}='cd $(printf '%q\n' "$(pwd)")'" 
     # echo $line
