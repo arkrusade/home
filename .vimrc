@@ -1,17 +1,19 @@
 "  mark line
 set encoding=utf-8
 
-" colorscheme desert
+colorscheme desert
 " packadd! dracula
 " colorscheme dracula 
-colorscheme inkpot 
+" colorscheme inkpot 
 set number
 syntax on
 set nocompatible
 set showcmd
 " shows if line extends or precedes visible screen
 set list
-set lcs=tab:\ \ ,precedes:>,extends:<
+" set lcs=tab:\ \ ,precedes:>,extends:<
+" set lcs=tab:»·,precedes:>,extends:<,trail:·,eol:$
+set lcs=tab:»·,precedes:>,extends:<,trail:·
 
 set path+=**
 filetype plugin on
@@ -48,21 +50,21 @@ vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
 
 " python-mode
-let g:pymode = 1
-let g:pymode_python = 'python3'
-let g:pymode_doc_bind = '<c-k>'
-let g:pymode_run_bind = '<leader>r'
-let g:pymode_breakpoint_bind = '<leader>b'
-let g:pymode_rope_show_doc_bind = '<leader>pd'
-let g:pymode_rope_goto_definition_bind = '<leader>pg'
-let g:pymode_rope_goto_definition_cmd = 'new'
-let g:pymode_rope_rename_bind = '<leader>pr'
-let g:pymode_rope_module_to_package_bind = '<leader>p1p'
-let g:pymode_rope_extract_method_bind = '<leader>pm'
-let g:pymode_rope_extract_variable_bind = '<leader>pl'
-let g:pymode_rope_use_function_bind = '<leader>pu'
-let g:pymode_rope_move_bind = '<leader>pv'
-let g:pymode_rope_change_signature_bind = '<leader>ps'
+" let g:pymode = 1
+" let g:pymode_python = 'python3'
+" let g:pymode_doc_bind = '<c-k>'
+" let g:pymode_run_bind = '<leader>r'
+" let g:pymode_breakpoint_bind = '<leader>b'
+" let g:pymode_rope_show_doc_bind = '<leader>pd'
+" let g:pymode_rope_goto_definition_bind = '<leader>pg'
+" let g:pymode_rope_goto_definition_cmd = 'new'
+" let g:pymode_rope_rename_bind = '<leader>pr'
+" let g:pymode_rope_module_to_package_bind = '<leader>p1p'
+" let g:pymode_rope_extract_method_bind = '<leader>pm'
+" let g:pymode_rope_extract_variable_bind = '<leader>pl'
+" let g:pymode_rope_use_function_bind = '<leader>pu'
+" let g:pymode_rope_move_bind = '<leader>pv'
+" let g:pymode_rope_change_signature_bind = '<leader>ps'
 
 " ignore line too long
 " let g:pymode_lint_ignore = "E501,W"
