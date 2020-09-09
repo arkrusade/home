@@ -83,3 +83,11 @@ z                           # maximize pane
 git status --porcelain | grep '^??' | cut -c4- >> .gitignore     # add untracked files to gitignore
 curl -u '$username' https://api.github.com/user/repos -d "{\"name\":\"$repo_name\"}"        # create Github repo from command line
 git commit --amend --no-edit                # reuse old commit message
+
+
+
+
+    ######## LLVM stuff
+
+clang -emit-llvm hello.c -c -o hello.bc
+opt -load p0/build/mypass/LLVMPJT.so -hello < hello.bc >/dev/null

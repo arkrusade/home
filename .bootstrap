@@ -1,6 +1,13 @@
 #!/bin/bash
+set -e
 cd ~/home
 for file in $(git ls-tree -r master --name-only)
 do
-	ln -sf ~/home/$file ~/$file
+    # hard or soft link?
+    # ln -f ~/home/$file ~/$file
+    ln -sf ~/home/$file ~/$file
 done
+
+. .install_everything
+
+# TODO: make ssh key?
