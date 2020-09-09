@@ -9,8 +9,9 @@ alias vbash="vim ~/.bashrc"
 # since cyghome was effectively home
 # CYG_HOME="/mnt/c/cygwin64/home/Justin\ Lee"
 # CYG_HOME="/mnt/c/cygwin64/home/justinjlee99"
-alias cyghome="cd $CYG_HOME"
-alias curr="cd $CYG_HOME/current/"
+# alias cyghome="cd $CYG_HOME"
+# alias curr="cd $CYG_HOME/current/"
+alias curr="cd $HOME/current"
 
 alias shad="ssh-add ~/.ssh/id_rsa"
 alias caen="~/caen"
@@ -21,7 +22,7 @@ alias la="ls -A"
 alias gs="git status"
 
 # alias git="hub"
-alias hub="$CYG_HOME/AppData/Local/GitHubCLI/bin/hub.exe"
+# alias hub="$CYG_HOME/AppData/Local/GitHubCLI/bin/hub.exe"
 
 
 ### Python aliases and related commands
@@ -34,8 +35,10 @@ alias denv="deactivate"
 ### Directory aliases
 
 # TODO: allow to change existing aliases, instead of just making new ones
+# also should be different for different environments
 # line for directory aliases
-alias bread='cd /mnt/c/cygwin64/home/Justin\ Lee/current/sacd/BreadTest'
-alias sacd='cd /mnt/c/cygwin64/home/Justin\ Lee/current/sacd/App/server'
-alias final='cd /mnt/e/442'
-alias 4='cd /mnt/c/cygwin64/home/Justin\ Lee/current/442'
+alias 4='cd /root/current/eecs489/Assignments/Assignment-1/starter_code'
+# alias bread='cd /mnt/c/cygwin64/home/Justin\ Lee/current/sacd/BreadTest'
+# alias sacd='cd /mnt/c/cygwin64/home/Justin\ Lee/current/sacd/App/server'
+# alias final='cd /mnt/e/442'
+# alias 4='cd /mnt/c/cygwin64/home/Justin\ Lee/current/442'

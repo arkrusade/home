@@ -35,6 +35,9 @@ curl ipinfo.io/ip           # what is my IP address
 
 find . -name 'mystring'     # Finds file by name nested
 
+ssh-keygen -t rsa -b 4096 -C "justinjlee99@gmail.com" -f $HOME/.ssh/id_rsa
+
+
     ######## Python related commands
 
 python3 -m venv env         # Create python virtual environment in env folder
