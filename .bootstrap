@@ -1,0 +1,6 @@
+#!/bin/bash
+cd ~/home
+for file in $(git ls-tree -r master --name-only)
+do
+	ln -sf ~/home/$file ~/$file
+done
