@@ -2,12 +2,16 @@
 set encoding=utf-8
 
 colorscheme desert
-" packadd! dracula
-" colorscheme dracula 
 " colorscheme inkpot 
+
+let g:dracula_colorterm = 0
+packadd! dracula
+colorscheme dracula 
+
+set termguicolors
 set number
-syntax on
 set nocompatible
+syntax enable
 set showcmd
 " shows if line extends or precedes visible screen
 set list
