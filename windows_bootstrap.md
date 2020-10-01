@@ -8,6 +8,7 @@ Dropbox
 Sharpkeys
 Spotify
 WSL Ubuntu - enable Windows features, then install from windows store
+Manic tracker
 Order of taskbar shortcuts:
   1. Chrome
   2. Windows Explorere
