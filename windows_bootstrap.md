@@ -1,15 +1,25 @@
 # Windows Bootstrap
 What to install with a fresh Windows install
 
-Chrome - sign in
-VSCode
-Sublime
-Dropbox
-Sharpkeys
-Spotify
-WSL Ubuntu - enable Windows features, then install from windows store
-Manic tracker
-Order of taskbar shortcuts:
+## Always needed
+- Chrome - sign in
+
+- VSCode
+
+- Sublime
+
+- Dropbox
+
+- Sharpkeys
+
+- Spotify
+
+- WSL Ubuntu - enable Windows features, then install from windows store
+
+- Manic tracker
+
+
+## Order of taskbar shortcuts:
   1. Chrome
   2. Windows Explorere
   3. VSCode
@@ -19,3 +29,8 @@ Order of taskbar shortcuts:
   1. Steam
   1. Battle.net
   1. 
+
+
+## Sometimes needed
+
+- Slack
