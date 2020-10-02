@@ -18,6 +18,8 @@ What to install with a fresh Windows install
 
 - Manic tracker
 
+- Discord
+
 
 ## Order of taskbar shortcuts:
   1. Chrome
