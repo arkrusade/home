@@ -20,6 +20,7 @@ What to install with a fresh Windows install
 
 - Discord
 
+- Treesize free
 
 ## Order of taskbar shortcuts:
   1. Chrome
