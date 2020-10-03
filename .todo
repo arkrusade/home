@@ -103,3 +103,5 @@ vscode
     universal settings.json
     list of extensions
         and their settings.json?
+    editor view groups
+        instead of tabs
