@@ -1,12 +1,12 @@
 "  mark line
 set encoding=utf-8
 
-colorscheme desert
-" colorscheme inkpot 
+" colorscheme desert
+colorscheme inkpot
 
 let g:dracula_colorterm = 0
 packadd! dracula
-colorscheme dracula 
+colorscheme dracula
 
 set termguicolors
 set number

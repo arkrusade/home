@@ -26,7 +26,12 @@ git clone --recurse-submodules -q https://github.com/python-mode/python-mode.git
 
 git clone --recurse-submodules -q https://github.com/flazz/vim-colorschemes $justin_dir/start/flazz-colors
 
-git clone -q https://github.com/zenorocha/dracula-theme $justin_dir/start/dracula
+### Remove dracula from flazz
+pushd $justin_dir/start/flazz-colors/colors
+rm dracula*
+popd
+
+git clone -q https://github.com/dracula/vim.git $justin_dir/start/dracula
 
 
 
