@@ -36,7 +36,7 @@ curl ipinfo.io/ip           # what is my IP address
 find . -name 'mystring'     # Finds file by name nested
 
 ssh-keygen -t rsa -b 4096 -C "justinjlee99@gmail.com" -f $HOME/.ssh/id_rsa
-
+ssh-copy-id -i ~/.ssh/mykey user@host               # copy ssh key to server
 
     ######## Python related commands
 
