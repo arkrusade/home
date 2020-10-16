@@ -2,7 +2,7 @@
 set encoding=utf-8
 
 " colorscheme desert
-colorscheme inkpot
+" colorscheme inkpot
 
 let g:dracula_colorterm = 0
 packadd! dracula
@@ -13,15 +13,22 @@ set number
 set nocompatible
 syntax enable
 set showcmd
+
 " shows if line extends or precedes visible screen
 set list
-" set lcs=tab:\ \ ,precedes:>,extends:<
-" set lcs=tab:»·,precedes:>,extends:<,trail:·,eol:$
 set lcs=tab:»·,precedes:>,extends:<,trail:·
 
+set path+=**
 " Show file options above the command line
 set wildmenu
-set path+=**
+
+" Don't offer to open certain files/directories
+set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png,*.ico
+set wildignore+=*.pdf,*.psd
+set wildignore+=node_modules/*,bower_components/*
+
+" Set the working directory to wherever the open file lives
+set autochdir
 
 filetype plugin on
 filetype plugin indent on
