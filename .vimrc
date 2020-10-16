@@ -4,11 +4,13 @@ set encoding=utf-8
 " colorscheme desert
 " colorscheme inkpot
 
+set termguicolors
 let g:dracula_colorterm = 0
+let g:dracula_italic = 0
 packadd! dracula
 colorscheme dracula
+highlight Normal ctermbg=None
 
-set termguicolors
 set number
 set nocompatible
 syntax enable
@@ -17,6 +19,10 @@ set showcmd
 " shows if line extends or precedes visible screen
 set list
 set lcs=tab:»·,precedes:>,extends:<,trail:·
+" disable line wrap on display
+set nowrap
+set textwidth=0
+set wrapmargin=0
 
 set path+=**
 " Show file options above the command line
@@ -25,6 +31,7 @@ set wildmenu
 " Don't offer to open certain files/directories
 set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png,*.ico
 set wildignore+=*.pdf,*.psd
+set wildignore+=*.o,*.exe
 set wildignore+=node_modules/*,bower_components/*
 
 " Set the working directory to wherever the open file lives
