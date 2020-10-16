@@ -17,9 +17,13 @@ cat file | tee -a log | cat > /dev/null             # intercept ouput and log to
 disown -a                   # prevents terminal exit from terminating child processes
 mkdir -p folder/{sub1,sub2}/{sub1,sub2,sub3}        # makes subfolders with all permutations
 
+command -v                  # figure out which command it corresponds to
+hash <command>
+type <command>
+
     ######## Bash script code ##
 set -Eeuo pipefail          # exits if command fails
-set -x                      # idk which, prints commands while executing
+set -x                      # check which way, prints commands while executing
 set -e                      # stops script on error
 tmpfile=$(mktemp /tmp/abc-script.XXXXXX)        $ make tempfile
 

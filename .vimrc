@@ -19,10 +19,13 @@ set list
 " set lcs=tab:»·,precedes:>,extends:<,trail:·,eol:$
 set lcs=tab:»·,precedes:>,extends:<,trail:·
 
+" Show file options above the command line
+set wildmenu
 set path+=**
-filetype plugin on
 
+filetype plugin on
 filetype plugin indent on
+
 " show existing tab with 4 spaces width
 set tabstop=4
 " when indenting with '>', use 4 spaces width
@@ -56,7 +59,7 @@ vnoremap <S-Tab> <gv
 " python-mode
 " let g:pymode = 1
 " let g:pymode_python = 'python3'
-" let g:pymode_doc_bind = '<c-k>'
+let g:pymode_doc_bind = '<c-k>'
 " let g:pymode_run_bind = '<leader>r'
 " let g:pymode_breakpoint_bind = '<leader>b'
 " let g:pymode_rope_show_doc_bind = '<leader>pd'
