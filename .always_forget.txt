@@ -8,6 +8,7 @@ sudo tcpdump -S "tcp[tcpflags] & (tcp-syn|tcp-ack|tcp-fin) != 0"        # watch 
     ##      Bash commands       ##
     ##############################
 
+echo $?                     # see status of last command
 sudo !!                     # redo last command as root/sudo
 <c-x-e>                     # open editor to run command
  ls -l                      # don't add command to history (leading space)
