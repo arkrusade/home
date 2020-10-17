@@ -42,6 +42,9 @@ find . -name 'mystring'     # Finds file by name nested
 ssh-keygen -t rsa -b 4096 -C "justinjlee99@gmail.com" -f $HOME/.ssh/id_rsa
 ssh-copy-id user@hostname.example.com               # copy ssh to server
 
+sudo chmod 600 ~/.ssh/id_rsa            # set permissions for ssh key
+sudo chmod 600 ~/.ssh/id_rsa.pub
+
 
 
     ######## Python related commands
