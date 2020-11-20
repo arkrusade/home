@@ -22,6 +22,8 @@ command -v                  # figure out which command it corresponds to
 hash <command>
 type <command>
 
+nohup echo "asdf" &         # run in background and capture output into nohup.out
+
     ######## Bash script code ##
 set -Eeuo pipefail          # exits if command fails
 set -x                      # check which way, prints commands while executing

@@ -24,7 +24,7 @@ set nowrap
 set textwidth=0
 set wrapmargin=0
 
-set path+=**
+set path+=**/**
 " Show file options above the command line
 set wildmenu
 
