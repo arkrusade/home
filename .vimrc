@@ -1,28 +1,45 @@
 "  mark line
 set encoding=utf-8
 
-colorscheme desert
-" colorscheme inkpot 
-
-let g:dracula_colorterm = 0
-packadd! dracula
-colorscheme dracula 
+" colorscheme desert
+" colorscheme inkpot
 
 set termguicolors
+let g:dracula_colorterm = 0
+let g:dracula_italic = 0
+packadd! dracula
+colorscheme dracula
+highlight Normal ctermbg=None
+
 set number
 set nocompatible
 syntax enable
 set showcmd
+
 " shows if line extends or precedes visible screen
 set list
-" set lcs=tab:\ \ ,precedes:>,extends:<
-" set lcs=tab:»·,precedes:>,extends:<,trail:·,eol:$
 set lcs=tab:»·,precedes:>,extends:<,trail:·
+" disable line wrap on display
+set nowrap
+set textwidth=0
+set wrapmargin=0
 
-set path+=**
+set path+=**/**
+" Show file options above the command line
+set wildmenu
+
+" Don't offer to open certain files/directories
+set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png,*.ico
+set wildignore+=*.pdf,*.psd
+set wildignore+=*.o,*.exe
+set wildignore+=node_modules/*,bower_components/*
+
+" Set the working directory to wherever the open file lives
+set autochdir
+
 filetype plugin on
-
 filetype plugin indent on
+
 " show existing tab with 4 spaces width
 set tabstop=4
 " when indenting with '>', use 4 spaces width
@@ -56,7 +73,7 @@ vnoremap <S-Tab> <gv
 " python-mode
 " let g:pymode = 1
 " let g:pymode_python = 'python3'
-" let g:pymode_doc_bind = '<c-k>'
+let g:pymode_doc_bind = '<c-k>'
 " let g:pymode_run_bind = '<leader>r'
 " let g:pymode_breakpoint_bind = '<leader>b'
 " let g:pymode_rope_show_doc_bind = '<leader>pd'

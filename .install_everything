@@ -2,9 +2,9 @@
 
 function mkd()
 {
-    echo "making directory ${1}"
+    echo "making directory $@"
     mkdir "$@"
-    read -p "enter"
+    # read -p "enter"
 }
 
 ## stop on error
@@ -12,8 +12,8 @@ set -e
 ## prints commands to stdout
 set +x
 ## Tmux
-
-git clone -q https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+echo "Tmux plugin manager"
+# git clone -q https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 ## Vim extensions
 VIM_PACK_DIR="$HOME/.vim/pack"
@@ -22,24 +22,34 @@ mkd $justin_dir -p
 cd $justin_dir
 mkd opt start -p
 
-git clone --recurse-submodules -q https://github.com/python-mode/python-mode.git $justin_dir/start/python-mode
+echo "Python mode for vim"
+git clone -q --recurse-submodules https://github.com/python-mode/python-mode.git $justin_dir/start/python-mode
 
+echo "Flazz-colors for vim"
 git clone --recurse-submodules -q https://github.com/flazz/vim-colorschemes $justin_dir/start/flazz-colors
 
-git clone -q https://github.com/zenorocha/dracula-theme $justin_dir/start/dracula
+### Remove dracula from flazz
+pushd $justin_dir/start/flazz-colors/colors
+rm dracula*
+popd
+
+echo "Dracula for vim"
+git clone -q https://github.com/dracula/vim.git $justin_dir/start/dracula
 
 
 
 ## Extensions from tpope
 tpope_dir="$VIM_PACK_DIR/tpope/start"
-mkd -p $tpope_dir
+mkd $tpope_dir -p
 cd $tpope_dir
 
 ## Surround
+echo "Surround for vim"
 git clone -q https://tpope.io/vim/surround.git
 vim -u NONE -c "helptags surround/doc" -c q
 
 ## Commentary
+echo "Commentary for vim"
 git clone -q https://tpope.io/vim/commentary.git
 vim -u NONE -c "helptags commentary/doc" -c q
 
