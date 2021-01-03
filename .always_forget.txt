@@ -24,6 +24,19 @@ type <command>
 
 nohup echo "asdf" &         # run in background and capture output into nohup.out
 
+
+    ######## Readline with vi editing mode
+|                           # Move to the n-th column
+C-w                         # Delete the previous word.
+C-u                         # Delete from the cursor to the beginning of line.
+U                           # Undo all previous text modifications.
+C-i                         # List all possible completions.
+*                           # Insert all possible completions.
+#                           # Comment and send command to history
+_                           # Insert n-th argument from previous command
+
+
+
     ######## Bash script code ##
 set -Eeuo pipefail          # exits if command fails
 set -x                      # check which way, prints commands while executing
@@ -42,12 +55,11 @@ curl ipinfo.io/ip           # what is my IP address
 find . -name 'mystring'     # Finds file by name nested
 
 ssh-keygen -t rsa -b 4096 -C "justinjlee99@gmail.com" -f $HOME/.ssh/id_rsa
-ssh-copy-id user@hostname.example.com               # copy ssh to server
+
+ssh-copy-id id@server               # copy ssh keypair to server
 
 sudo chmod 600 ~/.ssh/id_rsa            # set permissions for ssh key
 sudo chmod 600 ~/.ssh/id_rsa.pub
-
-
 
     ######## Python related commands
 

@@ -1,8 +1,26 @@
 #!/bin/bash
 
+# ARGS:
+#       fake_clone URL FOLDER
+#
+# if folder exists, git pull from url
+# else, clone from url
+function fake_clone()
+{
+    URL=$1
+    FOLDER=$2
+    if [ -d "$FOLDER" ] ; then
+        cd "$FOLDER"
+        git pull $URL
+    else
+        # git clone $URL $FOLDER
+        git clone $@
+    fi
+}
+
 function mkd()
 {
-    echo "making directory $@"
+    echo "mkdir $@"
     mkdir "$@"
     # read -p "enter"
 }
@@ -14,6 +32,7 @@ set +x
 ## Tmux
 echo "Tmux plugin manager"
 # git clone -q https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+fake_clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm -q
 
 ## Vim extensions
 VIM_PACK_DIR="$HOME/.vim/pack"
@@ -23,18 +42,22 @@ cd $justin_dir
 mkd opt start -p
 
 echo "Python mode for vim"
-git clone -q --recurse-submodules https://github.com/python-mode/python-mode.git $justin_dir/start/python-mode
+# git clone -q --recurse-submodules https://github.com/python-mode/python-mode.git $justin_dir/start/python-mode
+fake_clone https://github.com/python-mode/python-mode.git $justin_dir/start/python-mode -q --recurse-submodules
+
 
 echo "Flazz-colors for vim"
-git clone --recurse-submodules -q https://github.com/flazz/vim-colorschemes $justin_dir/start/flazz-colors
+# git clone --recurse-submodules -q https://github.com/flazz/vim-colorschemes $justin_dir/start/flazz-colors
+fake_clone https://github.com/flazz/vim-colorschemes $justin_dir/start/flazz-colors --recurse-submodules -q
 
 ### Remove dracula from flazz
 pushd $justin_dir/start/flazz-colors/colors
-rm dracula*
+rm dracula* || true
 popd
 
 echo "Dracula for vim"
-git clone -q https://github.com/dracula/vim.git $justin_dir/start/dracula
+# git clone -q https://github.com/dracula/vim.git $justin_dir/start/dracula
+fake_clone https://github.com/dracula/vim.git $justin_dir/start/dracula -q
 
 
 
@@ -45,11 +68,14 @@ cd $tpope_dir
 
 ## Surround
 echo "Surround for vim"
-git clone -q https://tpope.io/vim/surround.git
+# git clone -q https://tpope.io/vim/surround.git surround
+fake_clone https://tpope.io/vim/surround.git surround -q
 vim -u NONE -c "helptags surround/doc" -c q
 
 ## Commentary
 echo "Commentary for vim"
-git clone -q https://tpope.io/vim/commentary.git
+# git clone -q https://tpope.io/vim/commentary.git commentary
+fake_clone https://tpope.io/vim/commentary.git commentary -q
 vim -u NONE -c "helptags commentary/doc" -c q
 
+echo "Done with $(basename "${0##*/}")"

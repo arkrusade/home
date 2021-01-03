@@ -7,11 +7,11 @@ alias vbash="vim ~/.bashrc"
 # different for desktop vs laptop etc
 # should probably just make this home instead of cyghome
 # since cyghome was effectively home
-# CYG_HOME="/mnt/c/cygwin64/home/Justin\ Lee"
+CYG_HOME="/mnt/c/cygwin64/home/Justin\ Lee"
 # CYG_HOME="/mnt/c/cygwin64/home/justinjlee99"
-# alias cyghome="cd $CYG_HOME"
-# alias curr="cd $CYG_HOME/current/"
-alias curr="cd $HOME/current"
+alias cyghome="cd $CYG_HOME"
+alias curr="cd $CYG_HOME/current/"
+# alias curr="cd $HOME/current"
 
 alias shad="ssh-add ~/.ssh/id_rsa"
 alias caen="~/caen"
