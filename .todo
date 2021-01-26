@@ -3,6 +3,7 @@ tpope breaks that?
 vscode import/export settings
 auto generate readme
 lost .bash_colors??
+    remade, but idr what i lost
 
 
 general
@@ -10,7 +11,6 @@ general
     learn md
     figure out LS_COLORS
     add pathogen
-        and other tpope
         test install everything with tpope
     work on readme
         make readme link to files
@@ -51,6 +51,8 @@ figure out best editor
     tex?
     markdown
         also learn markdown
+    pandoc with latex
+        seems like a much better way to take notes
 
 vim
     move to next method
