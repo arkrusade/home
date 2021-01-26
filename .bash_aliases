@@ -37,7 +37,7 @@ alias denv="deactivate"
 # TODO: allow to change existing aliases, instead of just making new ones
 # also should be different for different environments
 # line for directory aliases
-alias 4='cd /root/current/eecs489/Assignments/Assignment-1/starter_code'
+alias 4='cd /home/justinjl/current/470/project1'
 # alias bread='cd /mnt/c/cygwin64/home/Justin\ Lee/current/sacd/BreadTest'
 # alias sacd='cd /mnt/c/cygwin64/home/Justin\ Lee/current/sacd/App/server'
 # alias final='cd /mnt/e/442'
