@@ -4,11 +4,15 @@ set encoding=utf-8
 " colorscheme desert
 " colorscheme inkpot
 
-set termguicolors
+" set termguicolors
 let g:dracula_colorterm = 0
 let g:dracula_italic = 0
-packadd! dracula
-colorscheme dracula
+if v:version > 800
+    packadd! dracula
+    colorscheme dracula
+else
+    colorscheme desert
+endif
 highlight Normal ctermbg=None
 
 set number
