@@ -117,3 +117,4 @@ git commit --amend --no-edit                # reuse old commit message
 
 clang -emit-llvm hello.c -c -o hello.bc
 opt -load p0/build/mypass/LLVMPJT.so -hello < hello.bc >/dev/null
+wslpath $(wslvar USERPROFILE)

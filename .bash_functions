@@ -32,6 +32,7 @@ function hubnew()
         return
     fi
     echo creating repo ${2} for user ${1}
-    curl -u '${1}' https://api.github.com/user/repos -d "{\"name\":\"${2}\"}"        # create Github repo from command line
+    # curl -u '${1}' https://api.github.com/user/repos -d "{\"name\":\"${2}\"}"        # create Github repo from command line
     # curl -u 'orccrusher99' https://api.github.com/user/repos -d "{\"name\":\"${2}\"}"        # create Github repo from command line
+    curl -u '${1}' -H "Authorization: $(cat ~/.ssh/http_pat)" https://api.github.com/user/repos
 }
