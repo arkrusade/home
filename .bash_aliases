@@ -14,7 +14,10 @@ alias curr="cd $CYG_HOME/current/"
 # alias curr="cd $HOME/current"
 
 alias shad="ssh-add ~/.ssh/id_rsa"
-alias caen="~/caen"
+# alias caen="~/caen"
+
+alias lastc="history 2 | head -1 | cut -c 8-"
+alias clp="lastc | clip.exe"
 
 # TODO: remove once ohmyzsh osx/git aliases are included
 alias ll="ls -lhA"
@@ -37,6 +40,8 @@ alias denv="deactivate"
 # TODO: allow to change existing aliases, instead of just making new ones
 # also should be different for different environments
 # line for directory aliases
+alias 99='cd /home/justinjl/current/proj1/src/main'
+alias 9='cd /home/justinjl/current/proj1'
 alias 4='cd /home/justinjl/current/470/project1'
 # alias bread='cd /mnt/c/cygwin64/home/Justin\ Lee/current/sacd/BreadTest'
 # alias sacd='cd /mnt/c/cygwin64/home/Justin\ Lee/current/sacd/App/server'
