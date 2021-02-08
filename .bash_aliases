@@ -17,7 +17,7 @@ alias shad="ssh-add ~/.ssh/id_rsa"
 # alias caen="~/caen"
 
 alias lastc="history 2 | head -1 | cut -c 8-"
-alias clp="lastc | clip.exe"
+alias clp='`lastc` | clip.exe'
 
 # TODO: remove once ohmyzsh osx/git aliases are included
 alias ll="ls -lhA"
