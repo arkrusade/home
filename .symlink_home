@@ -1,0 +1,10 @@
+#!/bin/bash
+set -e
+cd ~/home
+for file in $(comm <(git ls-tree master --name-only) <(ls $(cat nocopy.txt)) -3)
+do
+    # hard or soft link?
+    # ln -f ~/home/$file ~/$file
+    ln -sf ~/home/$file ~/$file
+done
+

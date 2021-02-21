@@ -1,0 +1,4 @@
+*.md
+.gitignore
+.gmail.txt
+.vsvimrc
