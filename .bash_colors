@@ -71,3 +71,5 @@ LPURPLE=`cesc 1 35`
 LCYAN=`cesc 1 36`
 WHITE=`cesc 1 37`
 NC='\033[0m'
+
+PROMPT_COMMAND='echo -e "\033[?16;0;224c"'
