@@ -50,7 +50,8 @@ COLOR_CODES="'${BLACK_ESCAPED}' '${RED_ESCAPED}' '${GREEN_ESCAPED}' '${YELLOW_ES
     '${LCYAN_ESCAPED}' '${WHITE_ESCAPED}' '${NC_ESCAPED}'";
 
 
-PS1="${LCYAN_ESCAPED}[$(date +%H%M)][\u${NC_ESCAPED}@${PURPLE_ESCAPED}\h${NC_ESCAPED}:${LCYAN_ESCAPED}\w]\$${NC_ESCAPED} "
+datepart='$(date +%H%M)'
+PS1="${LCYAN_ESCAPED}[$datepart][\u${NC_ESCAPED}@${PURPLE_ESCAPED}\h${NC_ESCAPED}:${LCYAN_ESCAPED}\w]\$${NC_ESCAPED} "
 
 BLACK=`cesc 0 30`
 RED=`cesc 0 31`
@@ -69,4 +70,4 @@ LBLUE=`cesc 1 34`
 LPURPLE=`cesc 1 35`
 LCYAN=`cesc 1 36`
 WHITE=`cesc 1 37`
-NC='\[\033[0m\]'
+NC='\033[0m'

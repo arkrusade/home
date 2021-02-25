@@ -1,10 +1,14 @@
 #!/bin/bash
+# Installs git-based plugins for Unix environment
+# On reruns, updates repos instead
 
 # ARGS:
 #       fake_clone URL FOLDER
 #
 # if folder exists, git pull from url
 # else, clone from url
+# sets FAKE_CLONE_STATUS to 'clone' or 'pull'
+FAKE_CLONE_STATUS=''
 function fake_clone()
 {
     URL=$1
@@ -12,9 +16,11 @@ function fake_clone()
     if [ -d "$FOLDER" ] ; then
         cd "$FOLDER"
         git pull $URL
+        FAKE_CLONE_STATUS='pull'
     else
         # git clone $URL $FOLDER
         git clone $@
+        FAKE_CLONE_STATUS='clone'
     fi
 }
 
@@ -41,6 +47,9 @@ mkd $justin_dir -p
 cd $justin_dir
 mkd opt start -p
 
+echo "CamelCaseMotion for vim"
+fake_clone https://github.com/bkad/CamelCaseMotion.git $justin_dir/start/CamelCaseMotion -q --recurse-submodules
+
 echo "Python mode for vim"
 # git clone -q --recurse-submodules https://github.com/python-mode/python-mode.git $justin_dir/start/python-mode
 fake_clone https://github.com/python-mode/python-mode.git $justin_dir/start/python-mode -q --recurse-submodules
@@ -50,10 +59,13 @@ echo "Flazz-colors for vim"
 # git clone --recurse-submodules -q https://github.com/flazz/vim-colorschemes $justin_dir/start/flazz-colors
 fake_clone https://github.com/flazz/vim-colorschemes $justin_dir/start/flazz-colors --recurse-submodules -q
 
-### Remove dracula from flazz
-pushd $justin_dir/start/flazz-colors/colors
-rm dracula* || true
-popd
+# if [ $FAKE_CLONE_STATUS -eq 'clone' ]
+# then
+    ## Remove dracula from flazz
+    pushd $justin_dir/start/flazz-colors/colors
+    rm dracula* || true
+    popd
+# fi
 
 echo "Dracula for vim"
 # git clone -q https://github.com/dracula/vim.git $justin_dir/start/dracula
