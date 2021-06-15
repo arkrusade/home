@@ -20,6 +20,7 @@ alias lastc="history 2 | head -1 | cut -c 8-"
 alias clp='`lastc` | clip.exe'
 
 # TODO: remove once ohmyzsh osx/git aliases are included
+alias ls="ls --color=auto"
 alias ll="ls -lhA"
 alias la="ls -A"
 alias gs="git status"
