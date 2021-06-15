@@ -81,13 +81,13 @@ cd $tpope_dir
 ## Surround
 echo "Surround for vim"
 # git clone -q https://tpope.io/vim/surround.git surround
-fake_clone https://tpope.io/vim/surround.git surround -q
+fake_clone https://github.com/tpope/vim-surround.git surround -q
 vim -u NONE -c "helptags surround/doc" -c q
 
 ## Commentary
 echo "Commentary for vim"
 # git clone -q https://tpope.io/vim/commentary.git commentary
-fake_clone https://tpope.io/vim/commentary.git commentary -q
+fake_clone https://github.com/tpope/vim-commentary.git commentary -q
 vim -u NONE -c "helptags commentary/doc" -c q
 
 echo "Done with $(basename "${0##*/}")"
