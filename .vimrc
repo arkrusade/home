@@ -7,7 +7,7 @@ set encoding=utf-8
 " set termguicolors
 let g:dracula_colorterm = 0
 let g:dracula_italic = 0
-if v:version > 800
+if v:version >= 800
     packadd! dracula
     colorscheme dracula
 else
@@ -19,6 +19,9 @@ set number
 set nocompatible
 syntax enable
 set showcmd
+
+set visualbell
+set t_vb=
 
 " shows if line extends or precedes visible screen
 set list

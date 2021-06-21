@@ -14,9 +14,10 @@ function fake_clone()
     URL=$1
     FOLDER=$2
     if [ -d "$FOLDER" ] ; then
-        cd "$FOLDER"
+        pushd "$FOLDER"
         git pull $URL
         FAKE_CLONE_STATUS='pull'
+        popd
     else
         # git clone $URL $FOLDER
         git clone $@
