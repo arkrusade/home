@@ -39,8 +39,8 @@ _                           # Insert n-th argument from previous command
 set -Eeuo pipefail          # exits if command fails
 set -x                      # check which way, prints commands while executing
 set -e                      # stops script on error
-tmpfile=$(mktemp /tmp/abc-script.XXXXXX)        $ make tempfile
-
+tmpfile=$(mktemp /tmp/abc-script.XXXXXX)        # make tempfile
+echo -ne <colorcode>text    # print using color codes to screen
 
     ######## Important bash (?) shell commands ##
 chmod +x test.sh            # sets the script to be executable
@@ -116,3 +116,5 @@ git commit --amend --no-edit                # reuse old commit message
 wslpath $(wslvar USERPROFILE)               # get windows user home path inside of wsl ubuntu
 printf '%*s' 20 hello                    # print string right aligned specific width
 echo "${!a}"             # indirect parameter expansion - gets value of the variable with the name as the variable's value" >> ~/.always_forget.txt 
+date      # prints the current time and date
+sudo ntpdate time.windows.com      # updates local time based on ntp server

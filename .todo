@@ -2,16 +2,13 @@ set lcs=tab:»·,precedes:>,extends:<,trail:·
 tpope breaks that?
 vscode import/export settings
 auto generate readme
-lost .bash_colors??
-    remade, but idr what i lost
 
 
 general
     move to zsh
     learn md
     figure out LS_COLORS
-    add pathogen
-        test install everything with tpope
+        use tput instead of hard coded?
     work on readme
         make readme link to files
         file name separation, and file descriptions should be smaller

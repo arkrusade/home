@@ -1,5 +1,6 @@
 # helper function for ANSI escape codes
 # https://stackoverflow.com/questions/5947742/how-to-change-the-output-color-of-echo-in-linux
+# https://stackoverflow.com/a/42449998
 # Black        0;30     Dark Gray     1;30
 # Red          0;31     Light Red     1;31
 # Green        0;32     Light Green   1;32
@@ -73,3 +74,6 @@ WHITE=`cesc 1 37`
 NC='\033[0m'
 
 PROMPT_COMMAND='echo -e "\033[?16;0;224c"'
+
+BOLD=$(tput bold)
+NORMAL=$(tput sgr0)

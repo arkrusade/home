@@ -13,11 +13,14 @@ function fake_clone()
 {
     URL=$1
     FOLDER=$2
+    NAME=$3
+    echo "Cloning/pulling ${NAME}"
     if [ -d "$FOLDER" ] ; then
-        pushd "$FOLDER"
-        git pull $URL
+        pushd "$FOLDER" > /dev/null
+        git pull
+        # git pull $URL -q
         FAKE_CLONE_STATUS='pull'
-        popd
+        popd > /dev/null
     else
         # git clone $URL $FOLDER
         git clone $@
@@ -37,9 +40,8 @@ set -e
 ## prints commands to stdout
 set +x
 ## Tmux
-echo "Tmux plugin manager"
 # git clone -q https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-fake_clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm -q
+fake_clone "Tmux plugin manager" https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm -q
 
 ## Vim extensions
 VIM_PACK_DIR="$HOME/.vim/pack"
@@ -60,13 +62,13 @@ echo "Flazz-colors for vim"
 # git clone --recurse-submodules -q https://github.com/flazz/vim-colorschemes $justin_dir/start/flazz-colors
 fake_clone https://github.com/flazz/vim-colorschemes $justin_dir/start/flazz-colors --recurse-submodules -q
 
-# if [ $FAKE_CLONE_STATUS -eq 'clone' ]
-# then
+if [ $FAKE_CLONE_STATUS == 'clone' ]
+then
     ## Remove dracula from flazz
     pushd $justin_dir/start/flazz-colors/colors
     rm dracula* || true
     popd
-# fi
+fi
 
 echo "Dracula for vim"
 # git clone -q https://github.com/dracula/vim.git $justin_dir/start/dracula
@@ -90,5 +92,10 @@ echo "Commentary for vim"
 # git clone -q https://tpope.io/vim/commentary.git commentary
 fake_clone https://github.com/tpope/vim-commentary.git commentary -q
 vim -u NONE -c "helptags commentary/doc" -c q
+
+## Fugitive
+echo "Fugitive for vim"
+fake_clone https://github.com/tpope/vim-fugitive.git fugitive -q
+vim -u NONE -c "helptags fugitive/doc" -c q
 
 echo "Done with $(basename "${0##*/}")"
